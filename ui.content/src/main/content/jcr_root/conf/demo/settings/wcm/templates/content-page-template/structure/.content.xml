@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            cq:deviceGroups="[/etc/mobile/groups/archetype]"
+            cq:template="/conf/demo/settings/wcm/templates/content-page-template"
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="demo/components/structure/page">
+        <root
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                    editable="{Boolean}true"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone-portrait
+                        jcr:primaryType="nt:unstructured"
+                        title="480px"
+                        width="{Long}480"/>
+                <tablet-portrait
+                        jcr:primaryType="nt:unstructured"
+                        title="768px"
+                        width="{Long}768"/>
+                <phone-landscape
+                        jcr:primaryType="nt:unstructured"
+                        title="992px"
+                        width="{Long}992"/>
+                <tablet-landscape
+                        jcr:primaryType="nt:unstructured"
+                        title="1200px"
+                        width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

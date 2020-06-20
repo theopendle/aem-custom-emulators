@@ -1,0 +1,32 @@
+@import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
+
+/* maximum amount of grid cells to be provided */
+@max_col: 12;
+
+.aem-Grid {
+    .generate-grid(default, @max_col);
+}
+
+@media (max-width: 480px) {
+    .aem-Grid {
+        .generate-grid(phone-portrait, @max_col);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .aem-Grid {
+        .generate-grid(phone-landscape, @max_col);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .aem-Grid {
+        .generate-grid(tablet-portrait, @max_col);
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .aem-Grid {
+        .generate-grid(tablet-landscape, @max_col);
+    }
+}
